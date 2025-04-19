@@ -14,3 +14,5 @@ To test the functions in this program, run **go test** with the terminal set to 
 ## Application
 Use **go build** to compile to program into an executable. For more information, see [this entry](https://www.markdownguide.org/basic-syntax/) in the Go documentation. This program was initially made with Windows.
 
+Clicking the executable will run it with the default file paths. Running the program from the command line will allow the user to specify input and output file paths if they would like.
+
