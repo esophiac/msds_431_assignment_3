@@ -16,3 +16,5 @@ Use **go build** to compile to program into an executable. For more information,
 
 Clicking the executable will run it with the default file paths. Running the program from the command line will allow the user to specify input and output file paths if they would like.
 
+## AI Assistants
+I did not use AI for this program.
