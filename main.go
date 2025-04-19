@@ -30,7 +30,7 @@ func createData(filePath string) [][]string {
 	return rawData
 }
 
-// write the a json to each line of the output document
+// write the json to each line of the output document
 func writeData(newData [][]string, filePath string) (returnString string) {
 
 	//declaring variables
@@ -90,7 +90,8 @@ func buildHead(inputSlice []string) []string {
 	return header
 }
 
-// create a map
+// create a map by using the first slice as the key and the second
+// slice as a value. Also converts the values to ints.
 func createMap(header []string, record []string) map[string]int {
 
 	line := map[string]int{}
@@ -107,12 +108,14 @@ func createMap(header []string, record []string) map[string]int {
 
 func main() {
 
+	// sets up default inputs and outputs. if inputs and outputs are provided,
+	// then use those instead
 	var inputPath, outputPath string = "housesInput.csv", "housesOutput.jsonl"
 	if len(os.Args) == 2 {
-		inputPath = os.Args[2]
+		inputPath = os.Args[1]
 	} else if len(os.Args) > 2 {
-		inputPath = os.Args[2]
-		outputPath = os.Args[3]
+		inputPath = os.Args[1]
+		outputPath = os.Args[2]
 	}
 
 	csvRecords := createData(inputPath)
